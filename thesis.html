@@ -19,36 +19,45 @@
 
 <div class="page-title">
 <h1>PhD Thesis</h1>
-<p>Joint PhD in Computer Science (Software Engineering), Universit&eacute;&nbsp;de Montpellier (France) and Universit&eacute;&nbsp;de Blida&nbsp;1 (Algeria). Defence: October 2026.</p>
+<p>Doctoral thesis in Computer Science, in <em>cotutelle</em> between the Universit&eacute;&nbsp;de Blida&nbsp;1 (Algeria) and the Universit&eacute;&nbsp;de Montpellier (LIRMM, France). Defence: October 2026.</p>
+<div class="subnav"><a href="#abstract">Abstract</a><a href="#problem">Problem</a><a href="#contributions">Contributions</a><a href="#results">Evaluation</a><a href="#perspectives">Perspectives</a><a href="#committee">Committee</a></div>
 </div>
 
 <section>
 <h2>Title</h2>
-<p class="lede"><em>Helping integrate privacy concerns into software: a model-driven engineering framework for GDPR-compliant software development.</em></p>
+<p class="lede"><em>Assisting the integration of privacy concerns into software: an MDE-based framework for GDPR-aware software engineering</em></p>
 <div class="links" style="margin-bottom:8px">
   <span class="btn" aria-disabled="true" style="opacity:.55;cursor:default">Thesis manuscript &mdash; available after the defence</span>
   <span class="btn" aria-disabled="true" style="opacity:.55;cursor:default">Defence slides &mdash; available after the defence</span>
 </div>
 </section>
 
-<section>
+<section id="abstract">
+<h2>Abstract</h2>
+<p>The generalisation of the digital transformation makes privacy protection a critical requirement of software systems. As organisations process ever larger volumes of personal data, complying with regulations such as the GDPR calls for disciplined, tool-supported engineering practices instead of ad-hoc ones. Existing approaches often fail to bridge the gap between legal requirements and concrete implementations, creating compliance vulnerabilities and operational inefficiencies.</p>
+<p>This thesis introduces <strong>PRIAM</strong> (PRIvacy Assessment Method), a generic methodological framework based on model-driven engineering (MDE) for integrating privacy protection by design. It formalises GDPR requirements in a metamodel that maps regulatory obligations to software specifications. A domain-specific language derived from this metamodel generates artefacts tailored to the context of an application and directly integrable into existing systems during implementation. To further assist developers, PRIAM adopts a scalable microservice architecture, secured by an authentication and authorisation service, and provides a dynamic consent manager based on ABAC (Attribute-Based Access Control) so that user consent controls data access at any time.</p>
+<p>The result is a lightweight and non-intrusive design approach that lets developers integrate GDPR support into applications that already exist or are being designed. A French r&eacute;sum&eacute; is included in the manuscript.</p>
+</section>
+
+<section id="context">
 <h2>Context</h2>
-<p>Software systems are increasingly personalised for their users, and the collection and exploitation of personal data has reached unprecedented levels. This raises a critical issue for the protection of users' privacy. Complying with data-protection regulations such as the European General Data Protection Regulation (GDPR) has become a legal necessity.</p>
+<p>Ubiquitous software systems now collect, store and process personal data at large scale, in sectors such as healthcare, finance, e-commerce, public administration and the Internet of Things. Beyond the benefits of personalised services, this exposes individuals to data leaks, unauthorised secondary use, profiling and surveillance, as shown by high-profile cases such as Cambridge Analytica and the Equifax breach. Technical countermeasures (cryptography, anonymisation, fine-grained access control) are essential but do not give users real control over their data. Regulations such as the GDPR have turned Privacy by Design from a voluntary good practice into a legal requirement, yet translating legal texts into engineering practice remains difficult.</p>
 </section>
 
-<section>
+<section id="problem">
 <h2>Problem</h2>
-<p>Despite these legal obligations, there is still no universally accepted method to integrate privacy management into applications. Developers are left with regulatory texts that are declarative, while what they need are actionable means to build privacy into the software, including existing applications.</p>
+<p>Empirical studies show that developers struggle to turn detailed, natural-language regulatory requirements into concrete technical designs. Privacy is often conflated with security, handled &ldquo;by policy&rdquo; (settings and documentation) rather than &ldquo;by architecture&rdquo;, and engineered in an ad-hoc, project-specific way. The literature offers privacy-friendly reuse approaches, but to our knowledge none provides a systematic and operational link between legal texts, privacy requirements and their implementation in reusable software components.</p>
+<div class="card"><span class="tag">Research question</span><p style="margin-top:6px"><strong>How can software engineering be effectively assisted to address privacy protection from the earliest design phases?</strong></p></div>
 </section>
 
-<section>
-<h2>Approach and contributions</h2>
-<p>The thesis proposes a tool-supported software engineering approach that integrates personal-data protection features into applications and goes beyond a purely declarative description of the regulation. Its main elements are:</p>
+<section id="contributions">
+<h2>Contributions</h2>
+<p>The thesis proposes an MDE-based framework that progressively turns a privacy regulation into privacy-aware applications. Its contribution is threefold.</p>
 <div class="cols">
-  <div class="card"><h3>PRIAM metamodel</h3><p>PRIAM (Privacy Assessment Method) models the GDPR by capturing the concepts described in the regulation. It is the foundation of all the other artefacts.</p></div>
-  <div class="card"><h3>Generic and tailored artefacts</h3><p>Generic user stories and a database schema derived from the metamodel, adaptable to any application that must account for privacy, plus a domain-specific language (DSL) and user stories tailored to the specific application.</p></div>
-  <div class="card"><h3>Privacy-rights database</h3><p>A database that stores both application-specific and user-specific data required to implement users' privacy rights.</p></div>
-  <div class="card"><h3>Non-intrusive protocol</h3><p>An externalised access-control (authentication and authorisation) and consent-management protocol based on the ABAC paradigm and the sidecar architecture pattern, so as to impact the provider's application as little as possible.</p></div>
+  <div class="card"><span class="tag warm">1</span><h3>A privacy-by-design framework</h3><p>PRIAM defines the stages, activities, artefacts and roles for integrating privacy from the early design phases onward, going from the semi-formal representation of legal concepts, to requirements, to technical solutions, with tool support.</p></div>
+  <div class="card"><span class="tag warm">2</span><h3>The PRIAM metamodel for the GDPR</h3><p>An actionable metamodel organised in seven packages (Actors, Data, Processings, Consents, Rights, Breaches, Documents) with OCL constraints. A derived DSL annotates personal data and processing activities and generates generic and application-specific artefacts: GDPR user stories, a privacy-enforcement database schema and a tailored backlog.</p></div>
+  <div class="card"><span class="tag warm">3</span><h3>PRIAM-MSA, a privacy microservice architecture</h3><p>A modular architecture that decouples privacy enforcement from application logic, with an identity, authentication and authorisation service (OAuth2) and a front-end for users to exercise their rights, integrated through standard protocols and APIs with minimal intrusion.</p></div>
+  <div class="card"><span class="tag warm">+</span><h3>Dynamic consent management</h3><p>A consent manager based on ABAC that authorises each processing per user and per purpose, with a history of grants and withdrawals with timestamps, useful to end users as well as for audits.</p></div>
 </div>
 </section>
 
@@ -58,17 +67,9 @@
   <li><span class="when">2026</span><span><em>Information and Software Technology</em> &mdash; <a href="https://doi.org/10.1016/j.infsof.2026.108065">the PRIAM tooled metamodel for GDPR</a> (journal, CORE&nbsp;A).</span></li>
   <li><span class="when">2024</span><span>ICSOC &mdash; microservice architecture, access control and interoperability patterns for managing privacy-related user consents (short paper, CORE&nbsp;A).</span></li>
   <li><span class="when">2022</span><span>ICSR Doctoral Symposium &mdash; a process for assisting privacy-by-design software engineering.</span></li>
+  <li><span class="when">2024</span><span>Poster, GDR GPL national days, Strasbourg (Best Poster Award).</span></li>
 </ul>
 <p>Full details on the <a href="publications.html">Publications</a> page.</p>
-</section>
-
-<section>
-<h2>Supervision</h2>
-<ul class="timeline">
-  <li><span class="when">Directors</span><span>Pr. Chouki Tibermacine (IRISA, Universit&eacute; Bretagne Sud) and Pr. Nadjia Benblidia (Universit&eacute; de Blida&nbsp;1)</span></li>
-  <li><span class="when">Co-director</span><span>Pr. Marianne Huchard (LIRMM, Universit&eacute; de Montpellier)</span></li>
-  <li><span class="when">Collaborators</span><span>Pr. Christelle Urtado and Dr. Sylvain Vauttier (Euromov DHM, Universit&eacute; de Montpellier &amp; IMT Mines Al&egrave;s)</span></li>
-</ul>
 </section>
 
 </div></main>
