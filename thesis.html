@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhD Thesis | Selena Lamari</title>
+<meta name="description" content="Summary of Selena Lamari's PhD thesis on model-driven, GDPR-compliant privacy engineering (PRIAM).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Selena Lamari</a>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="thesis.html" aria-current="page">PhD Thesis</a></li><li><a href="teaching.html">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a href="research.html">Research Activities</a></li></ul></nav>
+</div></header>
+<main><div class="wrap">
+
+<div class="page-title">
+<h1>PhD Thesis</h1>
+<p>Joint PhD in Computer Science (Software Engineering), Universit&eacute;&nbsp;de Montpellier (France) and Universit&eacute;&nbsp;de Blida&nbsp;1 (Algeria). Defence: October 2026.</p>
+</div>
+
+<section>
+<h2>Title</h2>
+<p class="lede"><em>Helping integrate privacy concerns into software: a model-driven engineering framework for GDPR-compliant software development.</em></p>
+<div class="links" style="margin-bottom:8px">
+  <span class="btn" aria-disabled="true" style="opacity:.55;cursor:default">Thesis manuscript &mdash; available after the defence</span>
+  <span class="btn" aria-disabled="true" style="opacity:.55;cursor:default">Defence slides &mdash; available after the defence</span>
+</div>
+</section>
+
+<section>
+<h2>Context</h2>
+<p>Software systems are increasingly personalised for their users, and the collection and exploitation of personal data has reached unprecedented levels. This raises a critical issue for the protection of users' privacy. Complying with data-protection regulations such as the European General Data Protection Regulation (GDPR) has become a legal necessity.</p>
+</section>
+
+<section>
+<h2>Problem</h2>
+<p>Despite these legal obligations, there is still no universally accepted method to integrate privacy management into applications. Developers are left with regulatory texts that are declarative, while what they need are actionable means to build privacy into the software, including existing applications.</p>
+</section>
+
+<section>
+<h2>Approach and contributions</h2>
+<p>The thesis proposes a tool-supported software engineering approach that integrates personal-data protection features into applications and goes beyond a purely declarative description of the regulation. Its main elements are:</p>
+<div class="cols">
+  <div class="card"><h3>PRIAM metamodel</h3><p>PRIAM (Privacy Assessment Method) models the GDPR by capturing the concepts described in the regulation. It is the foundation of all the other artefacts.</p></div>
+  <div class="card"><h3>Generic and tailored artefacts</h3><p>Generic user stories and a database schema derived from the metamodel, adaptable to any application that must account for privacy, plus a domain-specific language (DSL) and user stories tailored to the specific application.</p></div>
+  <div class="card"><h3>Privacy-rights database</h3><p>A database that stores both application-specific and user-specific data required to implement users' privacy rights.</p></div>
+  <div class="card"><h3>Non-intrusive protocol</h3><p>An externalised access-control (authentication and authorisation) and consent-management protocol based on the ABAC paradigm and the sidecar architecture pattern, so as to impact the provider's application as little as possible.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Related publications</h2>
+<ul class="timeline">
+  <li><span class="when">2026</span><span><em>Information and Software Technology</em> &mdash; <a href="https://doi.org/10.1016/j.infsof.2026.108065">the PRIAM tooled metamodel for GDPR</a> (journal, CORE&nbsp;A).</span></li>
+  <li><span class="when">2024</span><span>ICSOC &mdash; microservice architecture, access control and interoperability patterns for managing privacy-related user consents (short paper, CORE&nbsp;A).</span></li>
+  <li><span class="when">2022</span><span>ICSR Doctoral Symposium &mdash; a process for assisting privacy-by-design software engineering.</span></li>
+</ul>
+<p>Full details on the <a href="publications.html">Publications</a> page.</p>
+</section>
+
+<section>
+<h2>Supervision</h2>
+<ul class="timeline">
+  <li><span class="when">Directors</span><span>Pr. Chouki Tibermacine (IRISA, Universit&eacute; Bretagne Sud) and Pr. Nadjia Benblidia (Universit&eacute; de Blida&nbsp;1)</span></li>
+  <li><span class="when">Co-director</span><span>Pr. Marianne Huchard (LIRMM, Universit&eacute; de Montpellier)</span></li>
+  <li><span class="when">Collaborators</span><span>Pr. Christelle Urtado and Dr. Sylvain Vauttier (Euromov DHM, Universit&eacute; de Montpellier &amp; IMT Mines Al&egrave;s)</span></li>
+</ul>
+</section>
+
+</div></main>
+<footer><div class="wrap">
+<span>&copy; 2026 Selena Lamari</span>
+<span><a href="mailto:selena.lamari@univ-ubs.fr">Email</a> &middot; <a href="https://orcid.org/0009-0009-7981-6363">ORCID</a> &middot; <a href="https://www.linkedin.com/in/selena-lamari-05a837137/">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>

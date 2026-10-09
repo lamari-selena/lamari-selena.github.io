@@ -120,3 +120,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .hero img{width:160px;height:160px}
 }
 @media print{header.site,footer{display:none}body{background:#fff}}
+
+/* readability */
+.tag.rank{background:var(--mark);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.rank{color:#12161d}}
+h1,h2,h3{text-wrap:balance}
+section>p,.card p,.pub p,.page-title p{max-width:80ch;text-wrap:pretty}
+section>p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.card .meta{text-align:left}
+@media (max-width:620px){section>p,.card>p{text-align:left}}
