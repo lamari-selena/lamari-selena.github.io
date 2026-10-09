@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Activities | Selena Lamari</title>
+<meta name="description" content="Ongoing work, supervision, reviewing and training of Selena Lamari.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Selena Lamari</a>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="teaching.html">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a href="research.html" aria-current="page">Research Activities</a></li></ul></nav>
+</div></header>
+<main><div class="wrap">
+
+<div class="page-title">
+<h1>Research Activities</h1>
+<p>Ongoing work, projects, student supervision, reviewing and scientific community involvement.</p>
+<div class="subnav">
+  <a href="#ongoing">Ongoing work</a><a href="#supervision">Supervision</a><a href="#service">Reviewing &amp; service</a><a href="#training">Training &amp; events</a>
+</div>
+</div>
+
+<section id="ongoing">
+<h2>Ongoing work &amp; projects</h2>
+<div class="card"><span class="tag">Project</span><span class="tag warm">Ongoing</span><h3>CyberSkills &mdash; Security by Design micro-credential</h3><p class="meta">Universit&eacute; Bretagne Sud &middot; September 2026 &ndash; August 2027</p><p>As part of the CyberSkills project, I design and assemble a micro-credential on <em>Security by Design</em>, covering DevSecOps practices and the integration of security from the earliest stages of the software lifecycle.</p></div><div class="card"><span class="tag">Research</span><span class="tag warm">Ongoing</span><h3>Keeping the codebase and the GDPR record of processing in sync</h3><p class="meta">With Chouki Tibermacine and Mohammed Lamine Kerdoudi</p><p>The GDPR record of processing activities (Article 30) states what an organisation claims to do with personal data, but nothing guarantees that the code does the same: data collected for one purpose can silently be reused for another. We study an automated approach based on <strong>code annotations and static analysis</strong> to keep the record and the source code synchronised in both directions, detecting drift of the implementation from the record, and the reverse. The annotations are also explored as a way to drive other compliance features such as consent management, with validation on real cases and in CI/CD pipelines (a &ldquo;DevPrivOps&rdquo; perspective).</p></div><div class="card"><span class="tag">Research</span><span class="tag warm">Ongoing</span><h3>Comparing large language models for secure code generation</h3><p class="meta">With Chouki Tibermacine, R&eacute;gis Fleurquin and Salah Sadou &middot; IRISA, Universit&eacute; Bretagne Sud</p><p>LLMs improve developer productivity, but the code they generate may contain vulnerabilities such as SQL injection, weak cryptography or improper input validation. This work builds a benchmark of programming tasks with security pitfalls, generates code with open-source and commercial LLMs, and evaluates it with static-analysis tools (SonarQube, Bandit, Semgrep) against OWASP Top 10 and CWE criteria. Expected outcomes: a reusable evaluation framework, the recurring vulnerabilities per model, and recommendations (prompt engineering, post-processing filters) for AI-assisted development.</p></div><div class="card"><span class="tag">Research</span><span class="tag warm">Ongoing</span><h3>Privacy impact of anti-cheat systems in video games</h3><p class="meta">With Maxime Huyghe</p><p>Competitive games increasingly rely on anti-cheat software running at the most privileged level of the operating system (kernel, Ring 0). This work maps the architectures and intrusiveness of major solutions, builds a taxonomy of the data they collect, and measures the gap between what vendors declare and what is technically observed on a reproducible test bench. It also assesses the attack surface created by vulnerable anti-cheat drivers (Bring-Your-Own-Vulnerable-Driver attacks) and confronts these practices with the GDPR: minimisation, transparency, privacy by design and impact assessments.</p></div>
+</section>
+
+<section id="supervision">
+<h2>Supervision</h2>
+<p>I supervise projects, internships and final-year projects, mostly around cybersecurity and software systems.</p>
+<h3 style="margin:18px 0 10px">Current (2025&ndash;2026)</h3>
+<div class="card"><span class="tag warm">2025&ndash;2026</span><span class="tag">ENSIBS</span><h3>Comparative analysis of LLMs for secure code generation</h3><p class="meta">4th-year engineering project</p><p>Evaluation of several LLMs on their ability to produce reliable and secure code, using a prompt benchmark and cybersecurity-oriented metrics.</p></div><div class="card"><span class="tag warm">2025&ndash;2026</span><span class="tag">ENSIBS</span><h3>Operational observability platform</h3><p class="meta">End-of-studies internship</p><p>Design and deployment of a platform to monitor availability, performance, logs, queues, critical services and cloud billing, with dashboards and alerts for different user profiles (Google Cloud Monitoring and Logging, Grafana OSS, Redis, Google Cloud APIs).</p></div>
+<h3 style="margin:22px 0 4px">Past supervision</h3>
+
+<ul class="timeline">
+  <li><span class="when">2025<br>5 months</span><span><strong>Master 2 final project</strong>, Universit&eacute; de Blida 1 (2 students).<br>Extracting GDPR practices from open-source projects to integrate GDPR requirements into their applications.</span></li>
+  <li><span class="when">2025<br>3 months</span><span><strong>4th-year engineering project</strong>, ENSIBS (4 students).<br>Design and implementation of a consent-management method based on feature toggles.</span></li>
+  <li><span class="when">2024<br>2 months</span><span><strong>Bachelor 2 internship</strong>, Universit&eacute; de Montpellier.<br>Managing access to personal data with OAuth2 and the ABAC design pattern; front-end update.</span></li>
+  <li><span class="when">2023<br>2 months</span><span><strong>Bachelor 3 internship</strong>, Universit&eacute; de Montpellier.<br>Front-end of the PRIAM application.</span></li>
+  <li><span class="when">2023<br>2 months</span><span><strong>3rd-year technical study project (AI)</strong>, IMT Mines Al&egrave;s (3 students).<br>Completing the implementation by adding missing features.</span></li>
+  <li><span class="when">2023<br>3 months</span><span><strong>5th-year engineering project</strong>, Polytech Montpellier (2 students).<br>Continuing the development of the PRIAM application and improving existing features.</span></li>
+  <li><span class="when">2023<br>4 months</span><span><strong>2nd-year R&amp;D mission (AI)</strong>, IMT Mines Al&egrave;s (3 students).<br>State of GDPR in software projects using data mining and AI classification; dataset of GitHub project and commit metadata on GDPR.</span></li>
+  <li><span class="when">2022<br>2 months</span><span><strong>4th-year internship</strong>, Polytech Montpellier.<br>Implementation of part of the PRIAM microservice architecture that assists developers in GDPR compliance.</span></li>
+</ul>
+<p style="color:var(--muted);font-size:.92rem;margin-top:10px">Co-supervised with Pr. Chouki Tibermacine, Pr. Christelle Urtado and Dr. Sylvain Vauttier.</p>
+
+</section>
+
+<section id="service">
+<h2>Reviewing &amp; service</h2>
+<h3>External reviewer</h3>
+<ul class="timeline">
+  <li><span class="when">2026</span><span>IEEE International Conference on Software Architecture (ICSA 2026)</span></li>
+  <li><span class="when">2023</span><span>International Conference on Software Engineering and Knowledge Engineering (SEKE 2023)</span></li>
+  <li><span class="when">2023</span><span>Tunisian-Algerian Joint Conference on Applied Computing (TACC 2023)</span></li>
+</ul>
+<h3 style="margin-top:20px">Organisation &amp; committees</h3>
+<ul class="timeline">
+  <li><span class="when">March 2023</span><span>Organising committee (student volunteer), IEEE International Conference on Software Architecture (ICSA), L'Aquila, Italy.</span></li>
+  <li><span class="when">ENSIBS</span><span>Participation in the candidate selection committee.</span></li>
+</ul>
+</section>
+
+<section id="training">
+<h2>Training &amp; scientific events</h2>
+<ul class="timeline">
+  <li><span class="when">2026</span><span><strong>Cyberus Spring School</strong>, Lorient &mdash; poster presentation.</span></li>
+  <li><span class="when">2023 &ndash; 2024</span><span><strong>GDPR and data protection</strong> &mdash; online course by the CNIL: key notions, principles, roles, DPOs and compliance tools.</span></li>
+  <li><span class="when">July 2023</span><span><strong>Doctoriales Occitanie 2023</strong>, Albi &mdash; residential seminar on building an innovative project.</span></li>
+  <li><span class="when">June 2023</span><span><strong>International Software Architecture PhD School (ISAPS)</strong>, Lorentz Center, Leiden University, the Netherlands &mdash; intensive training in software architecture.</span></li>
+  <li><span class="when">July 2020</span><span>Online <strong>Cisco Cybersecurity</strong> course.</span></li>
+</ul>
+</section>
+
+</div></main>
+<footer><div class="wrap">
+<span>&copy; 2026 Selena Lamari</span>
+<span><a href="mailto:selena.lamari@univ-ubs.fr">Email</a> &middot; <a href="https://orcid.org/0009-0009-7981-6363">ORCID</a> &middot; <a href="https://www.linkedin.com/in/selena-lamari-05a837137/">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>
